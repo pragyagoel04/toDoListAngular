@@ -13,7 +13,7 @@
     <div class="stars"></div>
     <div class="twinkling"></div>
     <div ng-controller = "toDoController" class="container">
-        <h1>To do List:</h1>
+        <h1 style="color: white">To do List:</h1>
 
         <input type="text" ng-keyup="addToDo($event)"
                name="newToDo" ng-model="newToDo"
@@ -25,7 +25,7 @@
         <br>
         <br>
 
-        <ol>
+        <ol style="color: white">
             <li ng-repeat="todo in todos">
                 <input type="checkbox"
                        ng-model="todo.done" />
