@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>To Do Application</title>
-    <style>
-
-        .done{
-            text-decoration: line-through;
-            color: #ccc;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="script.js"></script>
 
 </head>
 <body ng-app="toDoList">
-    <div ng-controller = "toDoController">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div ng-controller = "toDoController" class="container">
+        <h1>To do List:</h1>
+
         <input type="text" ng-keyup="addToDo($event)"
                name="newToDo" ng-model="newToDo"
                placeholder="Enter items" required/>
 
         <br>
-        <button ng-click="clearCompleted()">Clear completed tasks</button>
+        <br>
+        <button type="button" class="btn btn-success" ng-click="clearCompleted()">Clear completed tasks</button>
+        <br>
         <br>
 
         <ol>
